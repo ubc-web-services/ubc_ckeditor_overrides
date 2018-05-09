@@ -1,0 +1,6 @@
+name = UBC CKEditor Overrides
+description = Plugin to adjust some of CKEditor's default settings (remove table default widths and other inline styles, allow HTML to break and indent when using the View Source button).
+package = UBC IT Web Services
+
+core = 7.x
+dependencies[] = ckeditor

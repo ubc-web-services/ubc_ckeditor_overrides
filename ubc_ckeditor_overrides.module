@@ -1,0 +1,18 @@
+<?php
+
+/**
+ * Hook to extend/change the ckeditor settings.
+ *
+ * This hook is invoked from ckeditor_profile_settings_compile(). The settings
+ * may be customized or enhanced; typically with options that cannot be
+ * controlled though the administrative UI from the ckeditor module.
+ *
+ * @param $settings
+ *   An associative array of settings.
+ * @param $conf
+ *   An associative array with access to raw profile settings that might be helpful to alter the real $settings.
+ */
+function ubc_ckeditor_overrides_ckeditor_settings_alter(&$settings, $conf) {
+  // Change the ckeditor config path.
+  $settings['customConfig'] = base_path() . drupal_get_path('module', 'ubc_ckeditor_overrides') . '/js/ubc_ckeditor_overrides.js';
+}
